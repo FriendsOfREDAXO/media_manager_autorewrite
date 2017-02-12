@@ -10,3 +10,9 @@ wird zu
 > images/mediatype/filename.jpg
 
 Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es können weitere auf der AddOn Page angegeben werden.
+
+Voraussetzungen
+----
+
+* yrewrite AddOn
+* media_manager AddOn
