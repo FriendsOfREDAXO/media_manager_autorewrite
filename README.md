@@ -1,4 +1,12 @@
-Demo-Addon für REDAXO 5
+MM Autorewrite
 ========================
 
-Bitte auch den Wiki-Artikel "[Änderungen in REDAXO 5](https://github.com/redaxo/redaxo/wiki/Aenderungen-in-REDAXO-5)" beachten!
+Dieses AddOn macht automatisch aus deinen Media Manager URLs schöne URLs (über den OUTPUT_FILTER).
+
+> index.php?rex_media_type=ImgTypeName&rex_media_file=ImageFileName
+
+wird zu
+
+> images/mediatype/filename.jpg
+
+Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es können weitere auf der AddOn Page angegeben werden.
