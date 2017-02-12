@@ -1,0 +1,10 @@
+media_manager_autorewrite_title = MM Autorewrite
+
+media_manager_autorewrite_main = Hauptseite
+
+media_manager_autorewrite_config = Einstellungen
+website_controller_config_save = Einstellungen speichern
+website_controller_config_saved = Einstellungen wurden gespeichert!
+
+# Benennung für die Addonrechte, sichtbar innerhalb der REDAXO-Administration unter Benutzer > Rollen > Allgemein
+perm_general_media_manager_autorewrite[] = Rechte für Media Manager Konfiguration
