@@ -14,8 +14,19 @@ Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es k
 
 ![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/media_manager_autorewrite/assets/media_manager_autorewrite_01.png)
 
+
+Installation
+------------
+Hinweis: dies ist kein Plugin!
+
+* Release herunterladen und entpacken.
+* Ordner umbenennen in `media_manager_autorewrite`.
+* In den Addons-Ordner legen: `/redaxo/src/addons`.
+
+Oder den REDAXO-Installer nutzen!
+
 Manuell
-----
+------------
 Wenn du z.B. ein inline background-image rewriten willst, musst du das in deiner Ausgabe manuell machen. Anstatt den kompletten String anzugeben, kannst du auch einfach nur folgendes machen
 
 ```php
@@ -26,7 +37,7 @@ Wenn du z.B. ein inline background-image rewriten willst, musst du das in deiner
 ```
 
 Voraussetzungen
-----
+------------
 
 * yrewrite AddOn
 * media_manager AddOn
