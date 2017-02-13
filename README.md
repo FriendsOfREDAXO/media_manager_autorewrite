@@ -19,3 +19,7 @@ Voraussetzungen
 
 * yrewrite AddOn
 * media_manager AddOn
+
+Thanks
+----
+* Joachim Dörr für die Settingspage und Hilfe bei der Einrichtung
