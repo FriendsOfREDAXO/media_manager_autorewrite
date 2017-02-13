@@ -14,6 +14,17 @@ Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es k
 
 ![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/media_manager_autorewrite/assets/media_manager_autorewrite_01.png)
 
+Manuell
+----
+Wenn du z.B. ein inline background-image rewriten willst, musst du das in deiner Ausgabe manuell machen. Anstatt den kompletten String anzugeben, kannst du auch einfach nur folgendes machen
+
+```php
+<?php 
+    echo mm_auto::rewrite('dateiname.jpg', 'imagetype');
+    // Ausgabe: /images/imagetyp/dateiname.jpg (oder ../images/, abhängig von der BASE-Tag Einstellung)
+?>
+```
+
 Voraussetzungen
 ----
 
