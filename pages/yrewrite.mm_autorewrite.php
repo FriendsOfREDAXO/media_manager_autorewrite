@@ -8,14 +8,15 @@
  * @var rex_addon
  */
 $content = '';
+$addon = rex_addon::get('media_manager_autorewrite');
 
 if (rex_post('config-submit', 'boolean')) {
-    $this->setConfig(rex_post('config', [
+    $addon->setConfig(rex_post('config', [
         ['replace_tags', 'string'],
         ['is_base_tag', 'boolean'],
     ]));
 
-    $content .= rex_view::info($this->i18n('config_saved'));
+    $content .= rex_view::info($addon->i18n('config_saved'));
 }
 
 $content .= '
@@ -28,8 +29,8 @@ $formElements = [];
 // set tags
 $formElements = [];
 $elements = array();
-$elements['label'] = '<label for="replace_tags">'.$this->i18n('replace_tags').'</label>';
-$elements['field'] = '<input class="form-control" type="text" id="replace_tags" name="config[replace_tags]" value="'.$this->getConfig('replace_tags').'"/>';
+$elements['label'] = '<label for="replace_tags">'.$addon->i18n('replace_tags').'</label>';
+$elements['field'] = '<input class="form-control" type="text" id="replace_tags" name="config[replace_tags]" value="'.$addon->getConfig('replace_tags').'"/>';
 $formElements[] = $elements;
 // parse select element
 $fragment = new rex_fragment();
@@ -39,8 +40,8 @@ $content .= $fragment->parse('core/form/form.php');
 // is base tag
 $formElements = [];
 $n = [];
-$n['label'] = '<label for="is_base_tag">'.$this->i18n('is_base_tag').'</label>';
-$n['field'] = '<input type="checkbox" id="is_base_tag" name="config[is_base_tag]" value="1" '.($this->getConfig('is_base_tag') ? ' checked="checked"' : '').' />';
+$n['label'] = '<label for="is_base_tag">'.$addon->i18n('is_base_tag').'</label>';
+$n['field'] = '<input type="checkbox" id="is_base_tag" name="config[is_base_tag]" value="1" '.($addon->getConfig('is_base_tag') ? ' checked="checked"' : '').' />';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();
@@ -54,7 +55,7 @@ $content .= '
 
 $formElements = [];
 $n = [];
-$n['field'] = '<input class="btn btn-save rex-form-aligned" type="submit" name="config-submit" value="'.$this->i18n('config_save').'" '.rex::getAccesskey($this->i18n('config_save'), 'save').' />';
+$n['field'] = '<input class="btn btn-save rex-form-aligned" type="submit" name="config-submit" value="'.$addon->i18n('config_save').'" '.rex::getAccesskey($addon->i18n('config_save'), 'save').' />';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();
@@ -69,6 +70,6 @@ $content .= '
 
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit');
-$fragment->setVar('title', $this->i18n('config'));
+$fragment->setVar('title', $addon->i18n('config'));
 $fragment->setVar('body', $content, false);
 echo $fragment->parse('core/page/section.php');

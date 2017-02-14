@@ -15,9 +15,10 @@ if (rex::isBackend() && is_object(rex::getUser())) {
 
 // bessere SEO urls für den image-manager
 if (!rex::isBackend()) {
+    $addon = rex_addon::get('yrewrite');
     // hier die tags definieren
-    $replaceTags = $this->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
-    $baseTag = $this->getConfig('is_base_tag');
+    $replaceTags = $addon->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
+    $baseTag = $addon->getConfig('is_base_tag');
 
     rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) use ($replaceTags, $baseTag) {
         $regex = '/(?<='.$replaceTags.')(?:\s*=\s*")\.*\/*index.php\?(rex_media_file|rex_media_type)=([^&]+)&(?:amp;)*(rex_media_type|rex_media_file)=([^"&]+)/';

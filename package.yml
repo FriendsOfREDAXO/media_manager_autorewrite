@@ -1,16 +1,15 @@
 package: media_manager_autorewrite
-version: '1.0.1'
+version: '1.0.2'
 author: Hirbod Mirjavadi, nightstomp / Joachim Dörr
 supportpage: https://nightstomp.com/
-
-page:
-    title: 'translate:title'
-    perm: media_manager_autorewrite[]
-    subpages:
-        config: { title: 'translate:config', icon: rex-icon fa-wrench }
 
 requires:
     packages:
         media_manager: '^2.0.0'
         yrewrite: '^2.0.0'
     redaxo: '^5.2.0'
+
+pages:
+    yrewrite/mm_autorewrite:
+        title: translate:title
+        perm: media_manager_autorewrite[]
