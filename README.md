@@ -12,7 +12,7 @@ wird zu
 
 Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es können weitere auf der AddOn Page angegeben werden.
 
-![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/media_manager_autorewrite/assets/media_manager_autorewrite_01.png)
+![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/media_manager_autorewrite/assets/screen.png)
 
 Settingspage
 ------------
