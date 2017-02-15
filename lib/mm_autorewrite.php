@@ -13,7 +13,7 @@ class MM_auto
     {
         $addon = rex_addon::get('media_manager_autorewrite');
         $baseTag = $addon->getConfig('is_base_tag');
-        $path = ($baseTag === true) ? '/' : '../';
+        $path = ($baseTag === true) ? '' : '/';
 
         $rewrite = $path.'images/'.$type.'/'.$filename;
 
