@@ -22,7 +22,7 @@ if (!rex::isBackend()) {
 
     rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) use ($replaceTags, $baseTag) {
         $regex = '/(?<='.$replaceTags.')(?:\s*=\s*")\.*\/*index.php\?(rex_media_file|rex_media_type)=([^&]+)&(?:amp;)*(rex_media_type|rex_media_file)=([^"&]+)/';
-        $path = ($baseTag === true) ? '/' : '../';
+        $path = ($baseTag === true) ? '' : '/';
 
         $ep->setSubject(preg_replace_callback(
             $regex,
