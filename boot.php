@@ -15,7 +15,7 @@ if (rex::isBackend() && is_object(rex::getUser())) {
 
 // bessere SEO urls für den image-manager
 if (!rex::isBackend()) {
-    $addon = rex_addon::get('yrewrite');
+    $addon = rex_addon::get('media_manager_autorewrite');
     // hier die tags definieren
     $replaceTags = $addon->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
     $baseTag = $addon->getConfig('is_base_tag');
