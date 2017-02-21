@@ -47,4 +47,5 @@ Voraussetzungen
 
 Thanks
 ----
+* Jan Camrda (@jdlx) für das Herz dieses AddOns, die Regular-Expression zum Ersetzen.
 * Joachim Dörr für die Settingspage und Hilfe bei der Einrichtung
