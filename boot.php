@@ -19,7 +19,8 @@ if (!rex::isBackend()) {
     // hier die tags definieren
     $replaceTags = $addon->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
     $baseTag = $addon->getConfig('is_base_tag');
-
+    
+    /* credits to @jdlx for this awesome regular expression */
     rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) use ($replaceTags, $baseTag) {
         $regex = '/(?<='.$replaceTags.')(?:\s*=\s*")\.*\/*index.php\?(rex_media_file|rex_media_type)=([^&]+)&(?:amp;)*(rex_media_type|rex_media_file)=([^"&]+)/';
         $path = ($baseTag === true) ? '' : '/';
