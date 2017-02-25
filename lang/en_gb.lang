@@ -1,0 +1,10 @@
+media_manager_autorewrite_title = Media Manager Rewrite
+
+media_manager_autorewrite_config = Settings
+media_manager_autorewrite_replace_tags = Attributes to be replaced
+media_manager_autorewrite_config_save = Save settings
+media_manager_autorewrite_config_saved = Settings have been saved!
+media_manager_autorewrite_is_base_tag = Website uses BASE tag
+
+# Benennung für die Addonrechte, sichtbar innerhalb der REDAXO-Administration unter Benutzer > Rollen > Allgemein
+perm_general_media_manager_autorewrite[] = Permissions for MM rewrite configuration
