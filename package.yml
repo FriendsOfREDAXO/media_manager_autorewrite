@@ -1,6 +1,6 @@
 package: media_manager_autorewrite
 version: '1.0.3'
-author: Hirbod Mirjavadi, nightstomp / Joachim Dörr
+author: Friends Of REDAXO
 supportpage: https://nightstomp.com/
 
 requires:
