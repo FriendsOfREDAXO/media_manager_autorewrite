@@ -14,6 +14,7 @@ if (rex_post('config-submit', 'boolean')) {
     $addon->setConfig(rex_post('config', [
         ['replace_tags', 'string'],
         ['is_base_tag', 'boolean'],
+        ['fix_expire_header', 'boolean'],
     ]));
 
     $content .= rex_view::info($addon->i18n('config_saved'));
@@ -42,6 +43,17 @@ $formElements = [];
 $n = [];
 $n['label'] = '<label for="is_base_tag">'.$addon->i18n('is_base_tag').'</label>';
 $n['field'] = '<input type="checkbox" id="is_base_tag" name="config[is_base_tag]" value="1" '.($addon->getConfig('is_base_tag') ? ' checked="checked"' : '').' />';
+$formElements[] = $n;
+
+$fragment = new rex_fragment();
+$fragment->setVar('elements', $formElements, false);
+$content .= $fragment->parse('core/form/checkbox.php');
+
+// is base tag
+$formElements = [];
+$n = [];
+$n['label'] = '<label for="fix_expire_header">'.$addon->i18n('fix_expire_header').'</label>';
+$n['field'] = '<input type="checkbox" id="fix_expire_header" name="config[fix_expire_header]" value="1" '.($addon->getConfig('fix_expire_header') ? ' checked="checked"' : '').' />';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();
