@@ -18,7 +18,7 @@ if (!rex::isBackend()) {
     
     // expire fix für diverse server, welche media manager medien nicht über die htaccess beeinflussen können
     // thx @RexDude
-    if (rex_get('rex_media_file') != '' && rex_get('rex_media_type') != '') {
+    if ($addon->getConfig('fix_expires') && rex_get('rex_media_file') != '' && rex_get('rex_media_type') != '') {
         header('Cache-Control: max-age=604800'); // 1 week
         header('Expires: '. gmdate('D, d M Y H:i:s \G\M\T', time() + 604800));
     }
