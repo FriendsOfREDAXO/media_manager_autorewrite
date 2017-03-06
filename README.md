@@ -17,6 +17,7 @@ Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es k
 Settingspage
 ------------
 Die Settingspage integriert sich als Tab-Reiter innerhalb des AddOns yRewrite.
+Innerhalb der Settingspage kann die Base-Einstellung aktiviert oder deaktiviert werden. Des Weiteren kann der Media Manager Expire-Fix zugeschaltet werden, falls deine .htaccess das Ablaufdatum für Mediamanager Medien nicht beeinflussen kann.
 
 Installation
 ------------
