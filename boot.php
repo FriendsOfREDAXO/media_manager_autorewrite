@@ -15,6 +15,14 @@ if (rex::isBackend() && is_object(rex::getUser())) {
 
 // bessere SEO urls für den image-manager
 if (!rex::isBackend()) {
+    
+    // expire fix für diverse server, welche media manager medien nicht über die htaccess beeinflussen können
+    // thx @RexDude
+    if (rex_get('rex_media_file') != '' && rex_get('rex_media_type') != '') {
+        header('Cache-Control: max-age=604800'); // 1 week
+        header('Expires: '. gmdate('D, d M Y H:i:s \G\M\T', time() + 604800));
+    }
+    
     $addon = rex_addon::get('media_manager_autorewrite');
     // hier die tags definieren
     $replaceTags = $addon->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
