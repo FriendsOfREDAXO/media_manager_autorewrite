@@ -2,7 +2,7 @@ MM Autorewrite
 ========================
 
 Dieses AddOn macht automatisch aus deinen Media Manager URLs schöne URLs (über den OUTPUT_FILTER).
-Funktioniert für alle Attribute (src="index.php..", href="index.php...", jedoch nicht für Background-Images). Die Attribute können eingestellt werden. Background images können manuell rewrited werden. Das srcset AddOn rewrited in der neuesten Version automatisch (siehe unten)
+Funktioniert für alle Attribute (src="index.php..", href="index.php...", jedoch nicht für Background-Images). Die Attribute können eingestellt werden. Das `media_manager_srcset` AddOn rewrited in der neuesten Version automatisch. background-images können manuell rewrited werden. (siehe unten)
 
 > index.php?rex_media_type=ImgTypeName&rex_media_file=ImageFileName
 
