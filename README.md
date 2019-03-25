@@ -33,6 +33,18 @@ Manuell
 ------------
 Wenn du z.B. ein inline background-image rewriten willst, musst du das in deiner Ausgabe manuell machen. Anstatt den kompletten String anzugeben, kannst du auch einfach nur folgendes machen
 
+Falls du bereits Redaxo 5.7 nutzt, kannst du auch direkt auf Boardmittel zugreifen, denn der Core liefert jetzt selbst eine Funktion dafür.
+
+```php
+<?php
+    echo rex_media_manager::getUrl($type, $file, $timestamp = null);
+    // $timestamp ist für Cache Busting interessant
+```
+
+Siehe: https://github.com/redaxo/redaxo/blob/master/redaxo/src/addons/media_manager/lib/media_manager.php#L388
+
+* Für User mit diesem AddOn und Redaxo < 5.7
+
 ```php
 <?php
     echo mm_auto::rewrite('dateiname.jpg', 'imagetype');
