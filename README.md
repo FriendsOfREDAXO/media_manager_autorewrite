@@ -48,7 +48,7 @@ Siehe: https://github.com/redaxo/redaxo/blob/master/redaxo/src/addons/media_mana
 ```php
 <?php
     echo mm_auto::rewrite('dateiname.jpg', 'imagetype');
-    // Ausgabe: /images/imagetyp/dateiname.jpg (oder ../images/, abhängig von der BASE-Tag Einstellung)
+    // Ausgabe: /media/imagetyp/dateiname.jpg (oder ../images/, abhängig von der BASE-Tag Einstellung)
 ?>
 ```
 
