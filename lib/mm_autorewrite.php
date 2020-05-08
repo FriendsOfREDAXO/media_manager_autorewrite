@@ -15,7 +15,7 @@ class MM_auto
         $baseTag = $addon->getConfig('is_base_tag');
         $path = ($baseTag === true) ? '' : '/';
 
-        $rewrite = $path.'images/'.$type.'/'.$filename;
+        $rewrite = $path.'media/'.$type.'/'.$filename;
 
         return $rewrite;
     }
