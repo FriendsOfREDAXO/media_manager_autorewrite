@@ -37,8 +37,8 @@ if (!rex::isBackend()) {
             $regex,
             function ($match) use ($ep, $path) {
                 $rewrite = ($match[1] == 'rex_media_type' && $match[3] == 'rex_media_file')
-                ? '="'.$path.'images/'.$match[2].'/'.$match[4]
-                : '="'.$path.'images/'.$match[4].'/'.$match[2];
+                ? '="'.$path.'media/'.$match[2].'/'.$match[4]
+                : '="'.$path.'media/'.$match[4].'/'.$match[2];
 
                 return $rewrite;
             },
