@@ -8,7 +8,6 @@ requires:
         media_manager: '^2.0.0'
         yrewrite: '^2.0.0'
     redaxo: '^5.2.0'
-    php: '^7'
 
 pages:
     yrewrite/mm_autorewrite:
