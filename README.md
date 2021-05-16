@@ -8,7 +8,7 @@ Funktioniert für alle Attribute (src="index.php..", href="index.php...", jedoch
 
 wird zu
 
-> images/mediatype/filename.jpg
+> media/mediatype/filename.jpg
 
 Es wird automatisch innerhalb von src, href und data-highresmobile gesucht. Es können weitere auf der AddOn Page angegeben werden.
 
