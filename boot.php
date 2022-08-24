@@ -27,15 +27,21 @@ if (!rex::isBackend()) {
     // hier die tags definieren
     $replaceTags = $addon->getConfig('replace_tags'); // 'src|href|data-highresmobile|data-highres|data-imagedefault';
     $baseTag = $addon->getConfig('is_base_tag');
+    $omitType = $addon->getConfig('omit_type');
 
     /* credits to @jdlx for this awesome regular expression */
-    rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) use ($replaceTags, $baseTag) {
+    rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) use ($replaceTags, $baseTag, $omitType) {
         $regex = '/(?<='.$replaceTags.')(?:\s*=\s*")\.*\/*index.php\?(rex_media_file|rex_media_type)=([^&]+)&(?:amp;)*(rex_media_type|rex_media_file)=([^"&]+)/';
         $path = ($baseTag === true) ? '' : '/';
 
         $ep->setSubject(preg_replace_callback(
             $regex,
-            function ($match) use ($ep, $path) {
+            function ($match) use ($ep, $path, $omitType) {
+                if ( $omitType )  
+                    $rewrite = ($match[1] == 'rex_media_type' && $match[3] == 'rex_media_file')
+                        ? '="'.$path.'media/'.$match[4]
+                        : '="'.$path.'media/'.$match[2];
+                else
                 $rewrite = ($match[1] == 'rex_media_type' && $match[3] == 'rex_media_file')
                 ? '="'.$path.'media/'.$match[2].'/'.$match[4]
                 : '="'.$path.'media/'.$match[4].'/'.$match[2];

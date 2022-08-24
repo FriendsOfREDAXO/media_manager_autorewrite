@@ -1,5 +1,4 @@
 <?php
-
 /**
  * media_manager_autorewrite Addon.
  *
@@ -15,6 +14,7 @@ if (rex_post('config-submit', 'boolean')) {
         ['replace_tags', 'string'],
         ['is_base_tag', 'boolean'],
         ['fix_expire_header', 'boolean'],
+        ['omit_type', 'boolean'],
     ]));
 
     $content .= rex_view::info($addon->i18n('config_saved'));
@@ -49,11 +49,22 @@ $fragment = new rex_fragment();
 $fragment->setVar('elements', $formElements, false);
 $content .= $fragment->parse('core/form/checkbox.php');
 
-// is base tag
+// header expire fix
 $formElements = [];
 $n = [];
 $n['label'] = '<label for="fix_expire_header">'.$addon->i18n('fix_expire_header').'</label>';
 $n['field'] = '<input type="checkbox" id="fix_expire_header" name="config[fix_expire_header]" value="1" '.($addon->getConfig('fix_expire_header') ? ' checked="checked"' : '').' />';
+$formElements[] = $n;
+
+$fragment = new rex_fragment();
+$fragment->setVar('elements', $formElements, false);
+$content .= $fragment->parse('core/form/checkbox.php');
+
+// omit type in link
+$formElements = [];
+$n = [];
+$n['label'] = '<label for="omit_type">'.$addon->i18n('omit_type').'</label>';
+$n['field'] = '<input type="checkbox" id="omit_type" name="config[omit_type]" value="1" '.($addon->getConfig('omit_type') ? ' checked="checked"' : '').' />';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();

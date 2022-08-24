@@ -6,6 +6,7 @@ media_manager_autorewrite_config_save = Guardar ajustes
 media_manager_autorewrite_config_saved = Los ajustes han sido guardados!
 media_manager_autorewrite_is_base_tag = La página usa la etiqueta BASE
 media_manager_autorewrite_fix_expire_header = Activar la corrección de caducidad del encabezado
+media_manager_autorewrite_omit_type = Omitir el type en el URL
 
 # Benennung für die Addonrechte, sichtbar innerhalb der REDAXO-Administration unter Benutzer > Rollen > Allgemein
 perm_general_media_manager_autorewrite[] = Permisos para la configuración de reescritura de MM

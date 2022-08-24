@@ -5,6 +5,7 @@ media_manager_autorewrite_replace_tags = Attributi da sostituire
 media_manager_autorewrite_config_save = Salva impostazioni
 media_manager_autorewrite_config_saved = Impostazioni salvati
 media_manager_autorewrite_is_base_tag = Il sito usa il BASE-Tag
+media_manager_autorewrite_omit_type = Traslasciare il type nel URL
 
 # Benennung für die Addonrechte, sichtbar innerhalb der REDAXO-Administration unter Benutzer > Rollen > Allgemein
 perm_general_media_manager_autorewrite[] = Diritti per la configurazione MM Rewrite
