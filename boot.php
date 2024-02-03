@@ -45,6 +45,8 @@ if (!rex::isBackend()) {
             $ep->getSubject())
         );
 
+        $ep->setSubject( preg_replace('/(media\/[^&]+)&/', '$1?', $ep->getSubject()));
+        
         return $ep->getSubject();
     });
 }
